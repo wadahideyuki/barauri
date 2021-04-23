@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ detail
+---------------------------------------*/
+.detailZone{
+  .lst-series{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 35px 30px 0;
+    @include mq{
+      margin: 10px 15px 0;
+    }
+    .cont-series{
+      width: 49%;
+      box-sizing: border-box;
+      padding: 16px 12px 0;
+      border-radius: 10px;
+      box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
+      background: #fff;
+      @include mq{
+        width: 100%;
+        padding: 10px 10px 0;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      }
+      &:nth-of-type(n+3){
+        margin-top: 30px;
+        @include mq{
+          margin-top: 0;
+        }
+      }
+      + .cont-series{
+        @include mq{
+          margin-top: 10px;
+        }
+      }
+      a{
+        @include mq{
+        }
+        &:link, &:visited{
+          color: #000;
+          text-decoration: none;
+        }
+      }
+      .tac{
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding: 15px 0;
+        @include mq{
+          font-size: 2.2rem;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+
+
+}
+
+
+

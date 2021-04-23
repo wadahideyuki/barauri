@@ -39,7 +39,7 @@ section{
 /*--------------------------------------
  パーツ
 ---------------------------------------*/
-$innerW: 1300;
+$innerW: 936;
 $innerW2: 1200;
 .u-{
   /* パディング */
@@ -56,8 +56,6 @@ $innerW2: 1200;
     max-width: px($innerW);
     margin-left: auto;
     margin-right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
     &.sz2{
       max-width: px($innerW2);
       padding-left: 100px;

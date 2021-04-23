@@ -4,5 +4,76 @@
  メインコンテンツ
 ---------------------------------------*/
 .mainZone{
-  
+  .secMain{
+    background: url($pathImg + "main/main_bg_wrap.png") center center no-repeat;
+    background-size: cover;
+    height: 378px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    > *{
+      position: absolute;
+    }
+    &:before{
+      content: "";
+      display: block;
+      background: url($pathImg + "main/main_grad.png") 0 0 no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 104px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .img{
+      margin-left: -430px;
+      top: -24px;
+      left: 50%;
+    }
+    h1{
+      margin-left: -275px;
+      top: 307px;
+      left: 50%;
+      z-index: 2;
+    }
+  }//.secMain
+  .secBox{
+    background: url($pathImg + "main/box_bg_wrap.png") center center no-repeat;
+    background-size: cover;
+    padding: 55px 0 49px;
+    .box{
+      box-shadow: 3.009px 3.993px 15px 0px rgba(0, 0, 0, 0.1);
+      position: relative;
+      .partTtl{
+        width: 100%;
+        position: absolute;
+        top: -37px;
+        left: 0;
+        span{
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          width: 347px;
+          height: 73px;
+          border-radius: 100px;
+          img{
+            width: 265px;
+          }
+        }
+      }//.partTtl
+      .partGoods{
+        background-color: #fff;
+        border-radius: 20px 20px 0 0;
+      }//.partGoods
+      .partCart{
+        background-color: #b4e4e4;
+        padding: 16px 0 21px 0;
+        border-radius: 0 0 20px 20px;
+        border-top: 2px solid #009a9a;
+      }//.partCart
+    }
+  }//.secBox
+
 }
