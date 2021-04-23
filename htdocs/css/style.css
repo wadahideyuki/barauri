@@ -750,8 +750,8 @@ textarea {
 /*--------------------------------------
  メインコンテンツ
 ---------------------------------------*/
-.mainZone .secMain {
-  background: url("../img/main/main_bg_wrap.png") center center no-repeat;
+.mainZone .secTtl {
+  background: url("../img/main/ttl_bg_wrap.png") center center no-repeat;
   background-size: cover;
   height: 378px;
   margin: auto;
@@ -759,14 +759,14 @@ textarea {
   overflow: hidden;
 }
 
-.mainZone .secMain > * {
+.mainZone .secTtl > * {
   position: absolute;
 }
 
-.mainZone .secMain:before {
+.mainZone .secTtl:before {
   content: "";
   display: block;
-  background: url("../img/main/main_grad.png") 0 0 no-repeat;
+  background: url("../img/main/ttl_grad.png") 0 0 no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 104px;
@@ -776,15 +776,15 @@ textarea {
   z-index: 1;
 }
 
-.mainZone .secMain .img {
+.mainZone .secTtl .img {
   margin-left: -430px;
   top: -24px;
   left: 50%;
 }
 
-.mainZone .secMain h1 {
+.mainZone .secTtl h1 {
   margin-left: -275px;
-  top: 307px;
+  top: 306px;
   left: 50%;
   z-index: 2;
 }
@@ -803,7 +803,7 @@ textarea {
 .mainZone .secBox .box .partTtl {
   width: 100%;
   position: absolute;
-  top: -37px;
+  top: -33px;
   left: 0;
 }
 
