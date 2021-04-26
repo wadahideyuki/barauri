@@ -8,11 +8,19 @@
     background: url($pathImg + "main/ttl_bg_wrap.png") center center no-repeat;
     background-size: cover;
     height: 378px;
+    padding: 0 50px;
     margin: auto;
     position: relative;
     overflow: hidden;
+    @include mq{
+      height: auto;
+      padding: 0;
+    }
     > *{
       position: absolute;
+      @include mq{
+        position: static;
+      }
     }
     &:before{
       content: "";
@@ -25,28 +33,42 @@
       bottom: 0;
       left: 0;
       z-index: 1;
+      @include mq{
+        content: normal;
+      }
     }
     h1{
       margin-left: -430px;
       top: -24px;
       left: 50%;
+      @include mq{
+        margin: 0;
+      }
     }
   }//.secMain
   .secBox{
     background: url($pathImg + "main/box_bg_wrap.png") center center no-repeat;
     background-size: cover;
-    padding-bottom: 49px;
+    padding: 0 50px 49px;
     position: relative;
     z-index: 1;
+    @include mq{
+      margin-top: vw(-80);
+      padding: 0;
+    }
     .box{
       border-radius: 20px;
       box-shadow: 3.009px 3.993px 15px 0px rgba(0, 0, 0, 0.1);
       position: relative;
+      @include mq{
+      }
       .partTtl{
         width: 100%;
         position: absolute;
         top: -33px;
         left: 0;
+        @include mq{
+        }
         span{
           display: inline-flex;
           justify-content: center;
@@ -57,6 +79,8 @@
           font-size: 3.8rem;
           font-weight: bold;
           border-radius: 100px;
+          @include mq{
+          }
         }
       }//.partTtl
       .partGoods{
@@ -67,30 +91,59 @@
         border-radius: 20px 20px 0 0;
         $inW: $innerW - 80;
         $itemW: 408;
+        @include mq{
+          display: block;
+          padding: 0;
+          border-radius: 0;
+        }
         > li{
           display: flex;
           align-items: flex-start;
           width: percentage($itemW/$inW);
           margin-right: percentage(($inW - ($itemW*2)) / $inW);
           padding: 15px 0;
+          @include mq{
+            width: auto;
+            margin-right: 0;
+          }
           &:nth-child(even){
             margin-right: 0;
+            @include mq{
+              background-color: #eee;
+            }
           }
           &:nth-child(n + 3){
             border-top: 1px dotted #ccc;
+            @include mq{
+            }
           }
         }
         .img{
           flex-shrink: 0;
           width: 133px;
           margin-right: 15px;
+          @include mq{
+            display: none;
+          }
         }
         .txts{
           width: 100%;
           text-align: left;
+          @include mq{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: auto;
+          }
+          .info{
+            @include mq{
+            }
+          }
           h3{
             font-size: 1.6rem;
             font-weight: bold;
+            @include mq{
+            }
             a{
               color: #00e;
             }
@@ -99,9 +152,13 @@
             margin-top: 5px;
             font-size: 1.5rem;
             font-weight: bold;
+            @include mq{
+            }
             strong{
               color: #c40000;
               font-size: 2.0rem;
+              @include mq{
+              }
             }
           }
           .numBox{
@@ -111,6 +168,8 @@
             border: 1px solid #cecece;
             border-radius: 3px;
             overflow: hidden;
+            @include mq{
+            }
             button{
               flex-shrink: 0;
               background-color: #595959;
@@ -120,11 +179,17 @@
               height: 36px;
               cursor: pointer;
               @include hvr;
+              @include mq{
+              }
               &.minus{
                 background-image: url($pathImg + "/main/icn_minus.svg");
+                @include mq{
+                }
               }
               &.plus{
                 background-image: url($pathImg + "/main/icn_plus.svg");
+                @include mq{
+                }
               }
             }
             .num{
@@ -132,10 +197,14 @@
               font-size: 1.7rem;
               border-left: 1px solid #cecece;
               border-right: 1px solid #cecece;
+              @include mq{
+              }
               input{
                 width: 100%;
                 height: 100%;
                 text-align: center;
+                @include mq{
+                }
               }
             }
           }
@@ -150,10 +219,18 @@
         font-weight: bold;
         border-radius: 0 0 20px 20px;
         border-top: 2px solid #009a9a;
+        @include mq{
+          display: block;
+          padding: 10px;
+        }
         dl{
           display: flex;
           align-items: center;
+          @include mq{
+          }
           dt{
+            @include mq{
+            }
             span{
               display: block;
               background-color: #009a9a;
@@ -162,6 +239,8 @@
               font-size: 1.5rem;
               border-radius: 3px;
               position: relative;
+              @include mq{
+              }
               &:after{
                 content: "";
                 display: block;
@@ -175,22 +254,32 @@
                 top: 0;
                 bottom: 0;
                 right: -7px;
+                @include mq{
+                }
               }
               strong{
                 color: #fff600;
+                @include mq{
+                }
               }
             }
           }
           dd{
             padding-left: 18px;
             font-size: 1.8rem;
+            @include mq{
+            }
             strong{
               margin-left: 12px;
               color: #c61c1c;
               font-size: 2.2rem;
+              @include mq{
+              }
             }
             span{
               font-size: 1.4rem;
+              @include mq{
+              }
             }
           }
         }
@@ -206,6 +295,8 @@
             box-shadow: 0px 3px 0px 0px rgba(187, 84, 0, 1.0);
             cursor: pointer;
             @include hvr;
+            @include mq{
+            }
           }
         }
       }//.partCart

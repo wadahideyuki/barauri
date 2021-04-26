@@ -754,13 +754,27 @@ textarea {
   background: url("../img/main/ttl_bg_wrap.png") center center no-repeat;
   background-size: cover;
   height: 378px;
+  padding: 0 50px;
   margin: auto;
   position: relative;
   overflow: hidden;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secTtl {
+    height: auto;
+    padding: 0;
+  }
+}
+
 .mainZone .secTtl > * {
   position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secTtl > * {
+    position: static;
+  }
 }
 
 .mainZone .secTtl:before {
@@ -776,18 +790,37 @@ textarea {
   z-index: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secTtl:before {
+    content: normal;
+  }
+}
+
 .mainZone .secTtl h1 {
   margin-left: -430px;
   top: -24px;
   left: 50%;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secTtl h1 {
+    margin: 0;
+  }
+}
+
 .mainZone .secBox {
   background: url("../img/main/box_bg_wrap.png") center center no-repeat;
   background-size: cover;
-  padding-bottom: 49px;
+  padding: 0 50px 49px;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox {
+    margin-top: -12.5vw;
+    padding: 0;
+  }
 }
 
 .mainZone .secBox .box {
@@ -823,6 +856,14 @@ textarea {
   border-radius: 20px 20px 0 0;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods {
+    display: block;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
 .mainZone .secBox .box .partGoods > li {
   display: flex;
   align-items: flex-start;
@@ -831,8 +872,21 @@ textarea {
   padding: 15px 0;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods > li {
+    width: auto;
+    margin-right: 0;
+  }
+}
+
 .mainZone .secBox .box .partGoods > li:nth-child(even) {
   margin-right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods > li:nth-child(even) {
+    background-color: #eee;
+  }
 }
 
 .mainZone .secBox .box .partGoods > li:nth-child(n + 3) {
@@ -845,9 +899,24 @@ textarea {
   margin-right: 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .img {
+    display: none;
+  }
+}
+
 .mainZone .secBox .box .partGoods .txts {
   width: 100%;
   text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .txts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+  }
 }
 
 .mainZone .secBox .box .partGoods .txts h3 {
@@ -924,6 +993,13 @@ textarea {
   font-weight: bold;
   border-radius: 0 0 20px 20px;
   border-top: 2px solid #009a9a;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart {
+    display: block;
+    padding: 10px;
+  }
 }
 
 .mainZone .secBox .box .partCart dl {
