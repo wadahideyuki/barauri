@@ -26,22 +26,18 @@
       left: 0;
       z-index: 1;
     }
-    .img{
+    h1{
       margin-left: -430px;
       top: -24px;
       left: 50%;
-    }
-    h1{
-      margin-left: -275px;
-      top: 306px;
-      left: 50%;
-      z-index: 2;
     }
   }//.secMain
   .secBox{
     background: url($pathImg + "main/box_bg_wrap.png") center center no-repeat;
     background-size: cover;
-    padding: 55px 0 49px;
+    padding-bottom: 49px;
+    position: relative;
+    z-index: 1;
     .box{
       border-radius: 20px;
       box-shadow: 3.009px 3.993px 15px 0px rgba(0, 0, 0, 0.1);
@@ -58,10 +54,9 @@
           background-color: #fff;
           width: 347px;
           height: 73px;
+          font-size: 3.8rem;
+          font-weight: bold;
           border-radius: 100px;
-          img{
-            width: 265px;
-          }
         }
       }//.partTtl
       .partGoods{
@@ -96,12 +91,17 @@
           h3{
             font-size: 1.6rem;
             font-weight: bold;
+            a{
+              color: #00e;
+            }
+          }
+          .price{
+            margin-top: 5px;
+            font-size: 1.5rem;
+            font-weight: bold;
             strong{
               color: #c40000;
               font-size: 2.0rem;
-            }
-            span{
-              font-size: 1.5rem;
             }
           }
           .numBox{

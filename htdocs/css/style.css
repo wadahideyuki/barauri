@@ -776,23 +776,18 @@ textarea {
   z-index: 1;
 }
 
-.mainZone .secTtl .img {
+.mainZone .secTtl h1 {
   margin-left: -430px;
   top: -24px;
   left: 50%;
 }
 
-.mainZone .secTtl h1 {
-  margin-left: -275px;
-  top: 306px;
-  left: 50%;
-  z-index: 2;
-}
-
 .mainZone .secBox {
   background: url("../img/main/box_bg_wrap.png") center center no-repeat;
   background-size: cover;
-  padding: 55px 0 49px;
+  padding-bottom: 49px;
+  position: relative;
+  z-index: 1;
 }
 
 .mainZone .secBox .box {
@@ -815,11 +810,9 @@ textarea {
   background-color: #fff;
   width: 347px;
   height: 73px;
+  font-size: 3.8rem;
+  font-weight: bold;
   border-radius: 100px;
-}
-
-.mainZone .secBox .box .partTtl span img {
-  width: 265px;
 }
 
 .mainZone .secBox .box .partGoods {
@@ -862,13 +855,19 @@ textarea {
   font-weight: bold;
 }
 
-.mainZone .secBox .box .partGoods .txts h3 strong {
-  color: #c40000;
-  font-size: 2.0rem;
+.mainZone .secBox .box .partGoods .txts h3 a {
+  color: #00e;
 }
 
-.mainZone .secBox .box .partGoods .txts h3 span {
+.mainZone .secBox .box .partGoods .txts .price {
+  margin-top: 5px;
   font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.mainZone .secBox .box .partGoods .txts .price strong {
+  color: #c40000;
+  font-size: 2.0rem;
 }
 
 .mainZone .secBox .box .partGoods .txts .numBox {
