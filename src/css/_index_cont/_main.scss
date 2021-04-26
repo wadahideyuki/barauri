@@ -43,6 +43,7 @@
     background-size: cover;
     padding: 55px 0 49px;
     .box{
+      border-radius: 20px;
       box-shadow: 3.009px 3.993px 15px 0px rgba(0, 0, 0, 0.1);
       position: relative;
       .partTtl{
@@ -87,8 +88,10 @@
         .img{
           flex-shrink: 0;
           width: 133px;
+          margin-right: 15px;
         }
         .txts{
+          width: 100%;
           text-align: left;
           h3{
             font-size: 1.6rem;
@@ -103,13 +106,20 @@
           }
           .numBox{
             display: flex;
+            width: 124px;
+            margin-top: 15px;
             border: 1px solid #cecece;
+            border-radius: 3px;
+            overflow: hidden;
             button{
+              flex-shrink: 0;
               background-color: #595959;
               background-position: center center;
               background-repeat: no-repeat;
               width: 34px;
               height: 36px;
+              cursor: pointer;
+              @include hvr;
               &.minus{
                 background-image: url($pathImg + "/main/icn_minus.svg");
               }
@@ -118,7 +128,7 @@
               }
             }
             .num{
-              width: 54px;
+              width: 100%;
               font-size: 1.7rem;
               border-left: 1px solid #cecece;
               border-right: 1px solid #cecece;
@@ -132,10 +142,72 @@
         }
       }//.partGoods
       .partCart{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         background-color: #b4e4e4;
-        padding: 16px 45px 21px 43px;
+        padding: 14px 43px 19px 41px;
+        font-weight: bold;
         border-radius: 0 0 20px 20px;
         border-top: 2px solid #009a9a;
+        dl{
+          display: flex;
+          align-items: center;
+          dt{
+            span{
+              display: block;
+              background-color: #009a9a;
+              color: #fff;
+              padding: 5px 18px 4px;
+              font-size: 1.5rem;
+              border-radius: 3px;
+              position: relative;
+              &:after{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                margin: auto;
+                border-style: solid;
+                border-width: 7.5px 0 7.5px 8px;
+                border-color: transparent transparent transparent #009a9a;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -7px;
+              }
+              strong{
+                color: #fff600;
+              }
+            }
+          }
+          dd{
+            padding-left: 18px;
+            font-size: 1.8rem;
+            strong{
+              margin-left: 12px;
+              color: #c61c1c;
+              font-size: 2.2rem;
+            }
+            span{
+              font-size: 1.4rem;
+            }
+          }
+        }
+        .btn{
+          button{
+            background-color: rgb(255, 114, 0);
+            width: 284px;
+            height: 54px;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: inherit;
+            border-radius: 10px;
+            box-shadow: 0px 3px 0px 0px rgba(187, 84, 0, 1.0);
+            cursor: pointer;
+            @include hvr;
+          }
+        }
       }//.partCart
     }
   }//.secBox
