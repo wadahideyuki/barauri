@@ -21,16 +21,44 @@ if (ua.indexOf('iPhone') > 0 ||ua.indexOf('iPod') > 0 || (ua.indexOf('Android') 
 
 
 /*--------------------
-  フォームパーツ
+     パックの金額
 --------------------*/
-//selectのplaceholder
-$(".u-selectWrap select").change(function(){
-  if($(this).prop("selectedIndex") == 0){
-    $(this).addClass("ph");
-  }else{
-    $(this).removeClass("ph");
+//金額の合計
+function fncSumPrice(){
+  var sumPrice = 0;
+  $(".mainZone .partGoods > li").each(function(){
+    var thisUnitPrice = $(this).find(".price strong").text();
+    var thisNum = $(this).find(".num input").val();
+    var thisPrice = thisUnitPrice * thisNum;
+    sumPrice+=thisPrice;
+  });
+  $(".mainZone .partCart dd strong").text(sumPrice);
+}//fncSumPrice() End
+fncSumPrice();
+
+//各パックの個数:click
+$(".numBox button").click(function(){
+  var thisBox = $(this).parent(".numBox");
+  var thisNumEl = thisBox.find(".num input");
+  var thisNum = thisNumEl.val();
+  if($(this).hasClass("minus")){//-
+    if(thisNum <= 0){
+      thisNum = 0;
+    }else{
+      thisNum--;
+    }
+  }else{//+
+    thisNum++;
   }
+  thisNumEl.val(thisNum);
+  fncSumPrice();
+  return false;
 });
+//各パックの個数:入力
+$(".mainZone .partGoods .num input").change(function(){
+  fncSumPrice();
+});
+
 
 
 //scrolladClass
