@@ -87,7 +87,7 @@ html {
 
 @media screen and (max-width: 767px) {
   html {
-    font-size: 1.5625vw;
+    font-size: 2.66667vw;
   }
 }
 
@@ -525,8 +525,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .u-spPd1 {
-    padding-left: 2.34375vw;
-    padding-right: 2.34375vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
 }
 
@@ -652,8 +652,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .slick-arrow {
-    width: 2.89375vw;
-    height: 4.6875vw;
+    width: 4.93867vw;
+    height: 8vw;
   }
 }
 
@@ -668,7 +668,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .slick-arrow.slick-prev {
-    left: 0.78125vw;
+    left: 1.33333vw;
   }
 }
 
@@ -679,7 +679,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .slick-arrow.slick-next {
-    right: 0.78125vw;
+    right: 1.33333vw;
   }
 }
 
@@ -704,7 +704,7 @@ textarea {
     margin: 0 2.93333vw;
   }
   .slick-dots li.slick-active {
-    border-width: 0.3125vw;
+    border-width: 0.53333vw;
   }
 }
 
@@ -762,18 +762,9 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .mainZone .secTtl {
+    background: none;
     height: auto;
     padding: 0;
-  }
-}
-
-.mainZone .secTtl > * {
-  position: absolute;
-}
-
-@media screen and (max-width: 767px) {
-  .mainZone .secTtl > * {
-    position: static;
   }
 }
 
@@ -798,6 +789,7 @@ textarea {
 
 .mainZone .secTtl h1 {
   margin-left: -430px;
+  position: absolute;
   top: -24px;
   left: 50%;
 }
@@ -805,6 +797,13 @@ textarea {
 @media screen and (max-width: 767px) {
   .mainZone .secTtl h1 {
     margin: 0;
+    position: static;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secTtl h1 img {
+    width: 100%;
   }
 }
 
@@ -818,7 +817,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .mainZone .secBox {
-    margin-top: -12.5vw;
+    background: none;
+    margin-top: -21.33333vw;
     padding: 0;
   }
 }
@@ -829,11 +829,24 @@ textarea {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
 .mainZone .secBox .box .partTtl {
   width: 100%;
   position: absolute;
   top: -33px;
   left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partTtl {
+    top: -7.2vw;
+  }
 }
 
 .mainZone .secBox .box .partTtl span {
@@ -846,6 +859,14 @@ textarea {
   font-size: 3.8rem;
   font-weight: bold;
   border-radius: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partTtl span {
+    width: 72.8vw;
+    height: 14.93333vw;
+    font-size: 3.0rem;
+  }
 }
 
 .mainZone .secBox .box .partGoods {
@@ -874,8 +895,10 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .mainZone .secBox .box .partGoods > li {
+    display: block;
     width: auto;
     margin-right: 0;
+    padding: 4vw 2.66667vw 4vw 4vw;
   }
 }
 
@@ -891,6 +914,24 @@ textarea {
 
 .mainZone .secBox .box .partGoods > li:nth-child(n + 3) {
   border-top: 1px dotted #ccc;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods > li:nth-child(n + 3) {
+    border-top: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods > li:first-child {
+    padding-top: 10.66667vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods > li:last-child {
+    padding-bottom: 8vw;
+  }
 }
 
 .mainZone .secBox .box .partGoods .img {
@@ -919,33 +960,69 @@ textarea {
   }
 }
 
-.mainZone .secBox .box .partGoods .txts h3 {
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .txts .info {
+    width: 100%;
+  }
+}
+
+.mainZone .secBox .box .partGoods .txts .info h3 {
   font-size: 1.6rem;
   font-weight: bold;
 }
 
-.mainZone .secBox .box .partGoods .txts h3 a {
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .txts .info h3 {
+    font-size: 1.3rem;
+  }
+}
+
+.mainZone .secBox .box .partGoods .txts .info h3 a {
   color: #00e;
 }
 
-.mainZone .secBox .box .partGoods .txts .price {
+.mainZone .secBox .box .partGoods .txts .info .price {
   margin-top: 5px;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.mainZone .secBox .box .partGoods .txts .price strong {
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .txts .info .price {
+    margin-top: 1.33333vw;
+    font-size: 1.3rem;
+  }
+}
+
+.mainZone .secBox .box .partGoods .txts .info .price strong {
   color: #c40000;
   font-size: 2.0rem;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .txts .info .price strong {
+    font-size: 1.7rem;
+  }
 }
 
 .mainZone .secBox .box .partGoods .txts .numBox {
   display: flex;
   width: 124px;
+  height: 36px;
   margin-top: 15px;
   border: 1px solid #cecece;
   border-radius: 3px;
   overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .txts .numBox {
+    flex-shrink: 0;
+    width: 33.06667vw;
+    height: 9.6vw;
+    margin-top: 0;
+    border-radius: 0.8vw;
+  }
 }
 
 .mainZone .secBox .box .partGoods .txts .numBox button {
@@ -954,7 +1031,6 @@ textarea {
   background-position: center center;
   background-repeat: no-repeat;
   width: 34px;
-  height: 36px;
   cursor: pointer;
   transition: opacity 0.3s;
 }
@@ -963,17 +1039,38 @@ textarea {
   opacity: 0.7;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .txts .numBox button {
+    width: 9.06667vw;
+  }
+}
+
 .mainZone .secBox .box .partGoods .txts .numBox button.minus {
   background-image: url("../img//main/icn_minus.svg");
+  background-size: 15px 3px;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .txts .numBox button.minus {
+    background-size: 4vw 0.8vw;
+  }
 }
 
 .mainZone .secBox .box .partGoods .txts .numBox button.plus {
   background-image: url("../img//main/icn_plus.svg");
+  background-size: 15px 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partGoods .txts .numBox button.plus {
+    background-size: 4vw 4vw;
+  }
 }
 
 .mainZone .secBox .box .partGoods .txts .numBox .num {
   width: 100%;
   font-size: 1.7rem;
+  font-weight: bold;
   border-left: 1px solid #cecece;
   border-right: 1px solid #cecece;
 }
@@ -991,20 +1088,39 @@ textarea {
   background-color: #b4e4e4;
   padding: 14px 43px 19px 41px;
   font-weight: bold;
-  border-radius: 0 0 20px 20px;
   border-top: 2px solid #009a9a;
+  border-radius: 0 0 20px 20px;
 }
 
 @media screen and (max-width: 767px) {
   .mainZone .secBox .box .partCart {
     display: block;
-    padding: 10px;
+    padding: 6.66667vw 4vw 6.13333vw;
+    border-top-width: 0.56vw;
+    border-bottom: 0.56vw solid #009a9a;
+    border-radius: 0;
   }
 }
 
 .mainZone .secBox .box .partCart dl {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart dl {
+    display: block;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart dl dt {
+    width: 100%;
+    position: absolute;
+    top: -10.13333vw;
+    left: 0;
+  }
 }
 
 .mainZone .secBox .box .partCart dl dt span {
@@ -1015,6 +1131,15 @@ textarea {
   font-size: 1.5rem;
   border-radius: 3px;
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart dl dt span {
+    display: inline-block;
+    padding: 1.06667vw 3.2vw 0.8vw;
+    font-size: 1.4rem;
+    border-radius: 100px;
+  }
 }
 
 .mainZone .secBox .box .partCart dl dt span:after {
@@ -1032,6 +1157,17 @@ textarea {
   right: -7px;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart dl dt span:after {
+    border-width: 1.86667vw 1.86667vw 0;
+    border-color: #009a9a transparent transparent;
+    top: auto;
+    bottom: -1.6vw;
+    left: 0;
+    right: 0;
+  }
+}
+
 .mainZone .secBox .box .partCart dl dt span strong {
   color: #fff600;
 }
@@ -1041,14 +1177,40 @@ textarea {
   font-size: 1.8rem;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart dl dd {
+    padding-left: 0;
+    font-size: 1.6rem;
+  }
+}
+
 .mainZone .secBox .box .partCart dl dd strong {
   margin-left: 12px;
   color: #c61c1c;
   font-size: 2.2rem;
 }
 
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart dl dd strong {
+    margin-left: 3.2vw;
+    font-size: 2.0rem;
+  }
+}
+
 .mainZone .secBox .box .partCart dl dd span {
   font-size: 1.4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart dl dd span {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart .btn {
+    margin-top: 2.4vw;
+  }
 }
 
 .mainZone .secBox .box .partCart .btn button {
@@ -1059,13 +1221,22 @@ textarea {
   font-size: 1.8rem;
   font-weight: inherit;
   border-radius: 10px;
-  box-shadow: 0px 3px 0px 0px #bb5400;
+  box-shadow: 0 3px 0 0 #bb5400;
   cursor: pointer;
   transition: opacity 0.3s;
 }
 
 .mainZone .secBox .box .partCart .btn button:hover {
   opacity: 0.7;
+}
+
+@media screen and (max-width: 767px) {
+  .mainZone .secBox .box .partCart .btn button {
+    width: 100%;
+    height: 14.4vw;
+    border-radius: 2.66667vw;
+    box-shadow: 0 0.8vw 0 0 #bb5400;
+  }
 }
 
 /*--------------------------------------
@@ -1076,16 +1247,48 @@ textarea {
   padding: 43px 50px 50px;
 }
 
+@media screen and (max-width: 767px) {
+  .detailZone {
+    padding: 9.06667vw 4vw 5.33333vw;
+  }
+}
+
 .detailZone h2 {
   color: #009a9a;
   font-size: 2.4rem;
   font-weight: bold;
 }
 
+@media screen and (max-width: 767px) {
+  .detailZone h2 {
+    font-size: 2.3rem;
+  }
+}
+
 .detailZone h2 span {
   display: inline-block;
   padding-bottom: 15px;
   border-bottom: 3px solid #009a9a;
+}
+
+@media screen and (max-width: 767px) {
+  .detailZone h2 span {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.detailZone .lead {
+  margin-top: 40px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .detailZone .lead {
+    margin-top: 2.66667vw;
+    font-size: 1.4rem;
+  }
 }
 
 .detailZone .lst-series {
@@ -1095,21 +1298,21 @@ textarea {
   margin-top: 43px;
 }
 
+@media screen and (max-width: 767px) {
+  .detailZone .lst-series {
+    display: block;
+    margin-top: 5.33333vw;
+  }
+}
+
 .detailZone .lst-series .cont-series {
   width: 49%;
   box-sizing: border-box;
-  padding: 16px 12px 0;
-  border-radius: 10px;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
-  background: #fff;
 }
 
 @media screen and (max-width: 767px) {
   .detailZone .lst-series .cont-series {
-    width: 100%;
-    padding: 10px 10px 0;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    width: auto;
   }
 }
 
@@ -1125,7 +1328,23 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .detailZone .lst-series .cont-series + .cont-series {
-    margin-top: 10px;
+    margin-top: 2.66667vw;
+  }
+}
+
+.detailZone .lst-series .cont-series a {
+  display: block;
+  background: #fff;
+  padding: 16px 12px 0;
+  border-radius: 10px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 767px) {
+  .detailZone .lst-series .cont-series a {
+    padding: 2.66667vw 2.66667vw 0;
+    border-radius: 1.33333vw;
+    box-shadow: 0px 1.06667vw 1.6vw rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -1142,8 +1361,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .detailZone .lst-series .cont-series .tac {
-    font-size: 2.2rem;
-    padding: 10px 0;
+    font-size: 1.3rem;
+    padding: 2.66667vw 0;
   }
 }
 

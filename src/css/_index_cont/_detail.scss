@@ -9,14 +9,33 @@ article:not(.detailZone){
 .detailZone{
   background-color: #f4f4f4;
   padding: 43px 50px 50px;
+  @include mq{
+    padding: vw(34) vw(15) vw(20);
+  }
   h2{
     color: #009a9a;
     font-size: 2.4rem;
     font-weight: bold;
+    @include mq{
+      font-size: 2.3rem;
+    }
     span{
       display: inline-block;
       padding-bottom: 15px;
       border-bottom: 3px solid #009a9a;
+      @include mq{
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+  .lead{
+    margin-top: 40px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    @include mq{
+      margin-top: vw(10);
+      font-size: 1.4rem;
     }
   }
   .lst-series{
@@ -25,19 +44,14 @@ article:not(.detailZone){
     justify-content: space-between;
     margin-top: 43px;
     @include mq{
+      display: block;
+      margin-top: vw(20);
     }
     .cont-series{
       width: 49%;
       box-sizing: border-box;
-      padding: 16px 12px 0;
-      border-radius: 10px;
-      box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
-      background: #fff;
       @include mq{
-        width: 100%;
-        padding: 10px 10px 0;
-        border-radius: 5px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        width: auto;
       }
       &:nth-of-type(n+3){
         margin-top: 30px;
@@ -47,11 +61,19 @@ article:not(.detailZone){
       }
       + .cont-series{
         @include mq{
-          margin-top: 10px;
+          margin-top: vw(10);
         }
       }
       a{
+        display: block;
+        background: #fff;
+        padding: 16px 12px 0;
+        border-radius: 10px;
+        box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
         @include mq{
+          padding: vw(10) vw(10) 0;
+          border-radius: vw(5);
+          box-shadow: 0px vw(4) vw(6) rgba(0, 0, 0, 0.3);
         }
         &:link, &:visited{
           color: #000;
@@ -63,8 +85,8 @@ article:not(.detailZone){
         font-weight: bold;
         padding: 15px 0;
         @include mq{
-          font-size: 2.2rem;
-          padding: 10px 0;
+          font-size: 1.3rem;
+          padding: vw(10) 0;
         }
       }
     }

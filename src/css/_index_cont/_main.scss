@@ -13,14 +13,9 @@
     position: relative;
     overflow: hidden;
     @include mq{
+      background: none;
       height: auto;
       padding: 0;
-    }
-    > *{
-      position: absolute;
-      @include mq{
-        position: static;
-      }
     }
     &:before{
       content: "";
@@ -39,10 +34,17 @@
     }
     h1{
       margin-left: -430px;
+      position: absolute;
       top: -24px;
       left: 50%;
       @include mq{
         margin: 0;
+        position: static;
+      }
+      img{
+        @include mq{
+          width: 100%;
+        }
       }
     }
   }//.secMain
@@ -53,6 +55,7 @@
     position: relative;
     z-index: 1;
     @include mq{
+      background: none;
       margin-top: vw(-80);
       padding: 0;
     }
@@ -61,6 +64,8 @@
       box-shadow: 3.009px 3.993px 15px 0px rgba(0, 0, 0, 0.1);
       position: relative;
       @include mq{
+        border-radius: 0;
+        box-shadow: none;
       }
       .partTtl{
         width: 100%;
@@ -68,6 +73,7 @@
         top: -33px;
         left: 0;
         @include mq{
+          top: vw(-27);
         }
         span{
           display: inline-flex;
@@ -80,6 +86,9 @@
           font-weight: bold;
           border-radius: 100px;
           @include mq{
+            width: vw(273);
+            height: vw(56);
+            font-size: 3.0rem;
           }
         }
       }//.partTtl
@@ -103,8 +112,10 @@
           margin-right: percentage(($inW - ($itemW*2)) / $inW);
           padding: 15px 0;
           @include mq{
+            display: block;
             width: auto;
             margin-right: 0;
+            padding: vw(15) vw(10) vw(15) vw(15);
           }
           &:nth-child(even){
             margin-right: 0;
@@ -115,6 +126,17 @@
           &:nth-child(n + 3){
             border-top: 1px dotted #ccc;
             @include mq{
+              border-top: none;
+            }
+          }
+          &:first-child{
+            @include mq{
+              padding-top: vw(40);
+            }
+          }
+          &:last-child{
+            @include mq{
+              padding-bottom: vw(30);
             }
           }
         }
@@ -137,38 +159,49 @@
           }
           .info{
             @include mq{
+              width: 100%;
             }
-          }
-          h3{
-            font-size: 1.6rem;
-            font-weight: bold;
-            @include mq{
-            }
-            a{
-              color: #00e;
-            }
-          }
-          .price{
-            margin-top: 5px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            @include mq{
-            }
-            strong{
-              color: #c40000;
-              font-size: 2.0rem;
+            h3{
+              font-size: 1.6rem;
+              font-weight: bold;
               @include mq{
+                font-size: 1.3rem;
+              }
+              a{
+                color: #00e;
+              }
+            }
+            .price{
+              margin-top: 5px;
+              font-size: 1.5rem;
+              font-weight: bold;
+              @include mq{
+                margin-top: vw(5);
+                font-size: 1.3rem;
+              }
+              strong{
+                color: #c40000;
+                font-size: 2.0rem;
+                @include mq{
+                  font-size: 1.7rem;
+                }
               }
             }
           }
           .numBox{
             display: flex;
             width: 124px;
+            height: 36px;
             margin-top: 15px;
             border: 1px solid #cecece;
             border-radius: 3px;
             overflow: hidden;
             @include mq{
+              flex-shrink: 0;
+              width: vw(124);
+              height: vw(36);
+              margin-top: 0;
+              border-radius: vw(3);
             }
             button{
               flex-shrink: 0;
@@ -176,25 +209,30 @@
               background-position: center center;
               background-repeat: no-repeat;
               width: 34px;
-              height: 36px;
               cursor: pointer;
               @include hvr;
               @include mq{
+                width: vw(34);
               }
               &.minus{
                 background-image: url($pathImg + "/main/icn_minus.svg");
+                background-size: 15px 3px;
                 @include mq{
+                  background-size: vw(15) vw(3);
                 }
               }
               &.plus{
                 background-image: url($pathImg + "/main/icn_plus.svg");
+                background-size: 15px 15px;
                 @include mq{
+                  background-size: vw(15) vw(15);
                 }
               }
             }
             .num{
               width: 100%;
               font-size: 1.7rem;
+              font-weight: bold;
               border-left: 1px solid #cecece;
               border-right: 1px solid #cecece;
               @include mq{
@@ -217,19 +255,28 @@
         background-color: #b4e4e4;
         padding: 14px 43px 19px 41px;
         font-weight: bold;
-        border-radius: 0 0 20px 20px;
         border-top: 2px solid #009a9a;
+        border-radius: 0 0 20px 20px;
         @include mq{
           display: block;
-          padding: 10px;
+          padding: vw(25) vw(15) vw(23);
+          border-top-width: vw(2.1);
+          border-bottom: vw(2.1) solid #009a9a;
+          border-radius: 0;
         }
         dl{
           display: flex;
           align-items: center;
           @include mq{
+            display: block;
+            position: relative;
           }
           dt{
             @include mq{
+              width: 100%;
+              position: absolute;
+              top: vw(-38);
+              left: 0;
             }
             span{
               display: block;
@@ -240,6 +287,10 @@
               border-radius: 3px;
               position: relative;
               @include mq{
+                display: inline-block;
+                padding: vw(4) vw(12) vw(3);
+                font-size: 1.4rem;
+                border-radius: 100px;
               }
               &:after{
                 content: "";
@@ -255,6 +306,12 @@
                 bottom: 0;
                 right: -7px;
                 @include mq{
+                  border-width: vw(7) vw(7) 0;
+                  border-color: #009a9a transparent transparent;
+                  top: auto;
+                  bottom: vw(-6);
+                  left: 0;
+                  right: 0;
                 }
               }
               strong{
@@ -268,22 +325,30 @@
             padding-left: 18px;
             font-size: 1.8rem;
             @include mq{
+              padding-left: 0;
+              font-size: 1.6rem;
             }
             strong{
               margin-left: 12px;
               color: #c61c1c;
               font-size: 2.2rem;
               @include mq{
+                margin-left: vw(12);
+                font-size: 2.0rem;
               }
             }
             span{
               font-size: 1.4rem;
               @include mq{
+                font-size: 1.3rem;
               }
             }
           }
         }
         .btn{
+          @include mq{
+            margin-top: vw(9);
+          }
           button{
             background-color: rgb(255, 114, 0);
             width: 284px;
@@ -292,10 +357,14 @@
             font-size: 1.8rem;
             font-weight: inherit;
             border-radius: 10px;
-            box-shadow: 0px 3px 0px 0px rgba(187, 84, 0, 1.0);
+            box-shadow: 0 3px 0 0 rgba(187, 84, 0, 1.0);
             cursor: pointer;
             @include hvr;
             @include mq{
+              width: 100%;
+              height: vw(54);
+              border-radius: vw(10);
+              box-shadow: 0 vw(3) 0 0 rgba(187, 84, 0, 1.0);
             }
           }
         }
