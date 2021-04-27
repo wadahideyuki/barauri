@@ -23,18 +23,39 @@ if (ua.indexOf('iPhone') > 0 ||ua.indexOf('iPod') > 0 || (ua.indexOf('Android') 
 /*--------------------
      パックの金額
 --------------------*/
-//金額の合計
-function fncSumPrice(){
+//金額の合計とURLの設定
+var urlPre = "https://deagostini.jp/order/index.php?mod=bulk";
+var urlBknum = "&backnumber[";
+var urlCls = "]=";
+function fncSumUrl(){
   var sumPrice = 0;
+  var cartUrl = urlPre;
+  var freeShipping = $(".mainZone .partCart dt span").attr("data-free");
   $(".mainZone .partGoods > li").each(function(){
     var thisUnitPrice = $(this).find(".price strong").text();
-    var thisNum = $(this).find(".num input").val();
+    var thisElm = $(this).find(".num input");
+    var thisNum = thisElm.val();
     var thisPrice = thisUnitPrice * thisNum;
+    var thisUrl = thisElm.attr("data-url");
+    //金額を加算
     sumPrice+=thisPrice;
+    //URLを追加
+    if(thisNum > 0){
+      cartUrl+=urlBknum + thisUrl + urlCls + thisNum;
+    }
   });
+  //金額の合計
   $(".mainZone .partCart dd strong").text(sumPrice);
-}//fncSumPrice() End
-fncSumPrice();
+  //URLの設定
+  $(".mainZone .partCart .btn a").attr("href", cartUrl);
+  //送料無料
+  if(sumPrice >= freeShipping){
+    $(".mainZone .partCart .btn a .freeShipping").addClass("show");
+  }else{
+    $(".mainZone .partCart .btn a .freeShipping").removeClass("show");
+  }
+}//fncSumUrl() End
+fncSumUrl();
 
 //各パックの個数:click
 $(".numBox button").click(function(){
@@ -51,12 +72,12 @@ $(".numBox button").click(function(){
     thisNum++;
   }
   thisNumEl.val(thisNum);
-  fncSumPrice();
+  fncSumUrl();
   return false;
 });
 //各パックの個数:入力
 $(".mainZone .partGoods .num input").change(function(){
-  fncSumPrice();
+  fncSumUrl();
 });
 
 
